@@ -1,5 +1,49 @@
-@import url("./vendors/bootstrap.min.css");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap");
+@import url("../vendors/bootstrap.min.css");
+
+/*=============*/
+/* Fonts */
+/* font weight light */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova_light.otf");
+  src: url("../fonts/proximanova_light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+/* font weight normal */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova_regular.ttf");
+  src: url("../fonts/proximanova_regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+/* font weight bold */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova_bold.otf");
+  src: url("../fonts/proximanova_bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+/* font weight Extar bold */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova_extrabold.otf");
+  src: url("../fonts/proximanova_extrabold.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+/* font weight heavy */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova_black.ttf");
+  src: url("../fonts/proximanova_black.otf") format("opentype"),
+    url("../fonts/proximanova_black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 /*=============*/
 /* Reset Style */
 body,
@@ -34,21 +78,165 @@ img {
 /*=============*/
 /* Body | RTL */
 body {
-  /* padding-top: 10px; */
   color: var(--clr-body);
   background: var(--bg-body);
   font-size: 16px;
   font-weight: 400;
-  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-family: "Proxima Nova", sans-serif;
 }
 /*=============*/
 /* Variables */
 :root {
   --bg-body: #ffffff;
-  --clr-body: #23293f;
-  --clr-primary: #1769cc;
-  --clr-secondary: #f88160;
-  --clr-success: #00bf00;
-  --clr-gray: #f4f9ff;
-  --clr-gray-1: #f2f6fa;
+  --clr-body: #000000;
+  --clr-primary: #15115f;
+  --clr-secondary: #feb109;
+  --clr-warning: #f7a022;
+  --clr-success: #09ca5f;
+  --clr-gray: #c2c6cd;
+  --clr-gray-1: #edeffe;
+}
+/*=============*/
+/* Components */
+.rmz-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 29px;
+  border-radius: 40vw;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+}
+.rmz-btn.btn-primary {
+  background: var(--clr-primary);
+  color: white;
+}
+.rmz-btn.btn-link {
+  padding: 0;
+}
+.rmz-btn.btn-secondary{
+  background: var(--clr-secondary);
+  color: var(--clr-primary);
+ 
+}
+/*=============*/
+/* Header */
+.rmz-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.rmz-header .rmz-header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 20px 0;
+}
+.rmz-header .rmz-header__content .navbar {
+  flex: 1.5;
+  padding-block: 0;
+}
+.rmz-header .rmz-header__content .navbar .navbar-collapse {
+  justify-content: center;
+}
+.rmz-header .rmz-header__content .navbar-nav {
+  gap: 2.5rem;
+  justify-content: flex-end;
+  width: 100%;
+}
+.rmz-header .rmz-header__content .navbar-brand {
+  padding: 0;
+}
+.rmz-header .rmz-header__content .navbar-nav .nav-link {
+  color: #000000;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 20px;
+}
+.rmz-header .rmz-header__content .header-toolbar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 23px;
+  position: relative;
+  flex-wrap: wrap;
+}
+.rmz-header .rmz-header__content .header-toolbar:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 44px;
+  inset-inline-end: 30px;
+  background-color: #000000;
+  opacity: 0.05;
+}
+/*=============*/
+/* Hero */
+.rmz-hero {
+  background: var(--clr-primary);
+  padding-block: 2.8rem 4rem;
+  padding-inline: 1.5rem;
+}
+.rmz-hero .rmz-hero__content .rmz-hero__title {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 98.5px;
+  letter-spacing: -4px;
+  color: var(--clr-secondary);
+  margin-bottom: 52px;
+}
+.rmz-hero .rmz-hero__content .rmz-hero__desc {
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #d9d9d9;
+  margin-bottom: 75px;
+}
+.rmz-hero .rmz-subscription-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.rmz-hero .rmz-subscription-form .form-control {
+  padding: 16px 24px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #AAAAAA;
+  border-radius: 4vw;
+  max-width: 75%;
+  border: 1px solid rgba(0, 0, 0 ,0.2);
+  color: #000;
+  max-width: 340px;
+}
+.rmz-hero .rmz-subscription-form .form-control::placeholder{color:#AAAAAA;}
+.rmz-hero .rmz-subscription-form .form-control:focus-visible,
+.rmz-hero .rmz-subscription-form .form-control:focus{
+  box-shadow: 0 0 0px 2px var(--clr-secondary);
+  border-color: var(--clr-secondary);
+}
+.rmz-hero .rmz-subscription-form .rmz-btn{
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 20px;
+  min-width: 146px;
+  border-color: transparent;
+}
+.rmz-hero .rmz-subscription-form .rmz-btn:focus,
+.rmz-hero .rmz-subscription-form .rmz-btn:focus-visible {
+    border-color: var(--clr-primary);
+    outline: 2px solid var(--clr-secondary);
+}
+.rmz-hero .rmz-hero__img {
+  max-width: 640px;
+  mix-blend-mode: lighten;
+}
+
+/*=============*/
+/* General */
+.text-warning {
+  color: var(--clr-warning);
 }
