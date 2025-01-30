@@ -21,9 +21,11 @@
     <meta name="apple-mobile-web-app-title" content="Romoz" />
     <link rel="manifest" href="./assets/media/favicon/site.webmanifest" />
 
-    <!-- Fonts -->
+    <!-- links -->
+    <link href="./assets/css/css.css" rel="preload" as="style"/>
+    <link rel="preload" href="./assets/media/hero.png" as="image">
 
-    <link href="./assets/css/css.css" rel="stylesheet" />
+    <link href="./assets/css/css.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -33,7 +35,7 @@
             <div class="rmz-header__content">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="navbar-brand" href="">
-                        <img src="./assets/media/logo1.svg" alt="Romoz Logo" />
+                        <img src="./assets/media/logo1.svg" alt="Romoz Logo"  loading="lazy"/>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,7 +86,7 @@
                     </div>
                     <div class="col-lg-7">
                         <div class="rmz-hero__img">
-                            <img src="./assets/media/hero.png" alt="image of 3 astronauts" width="100%" />
+                            <img src="./assets/media/hero.png" alt="image of 3 astronauts" width="100%"  loading="lazy"/>
                         </div>
                     </div>
                 </div>
@@ -168,24 +170,24 @@
                         <div class="row">
                             <div class="col-lg-3 branding mix">
                                 <div class="portfolio-item">
-                                    <img src="./assets/media/portfolio/branding.png" alt="Branding Project 1" />
+                                    <img src="./assets/media/portfolio/branding.png" alt="Branding Project 1"  loading="lazy"/>
                                 </div>
                             </div>
                             <div class="col-lg-6 social branding mix">
                                 <div class="portfolio-item">
-                                    <img src="./assets/media/portfolio/social.png" alt="Social Media Project 1" />
+                                    <img src="./assets/media/portfolio/social.png" alt="Social Media Project 1"  loading="lazy"/>
                                 </div>
                             </div>
                             <div class="col-lg-3">
                                 <div class="row">
                                     <div class="col-12 ui ux mix">
                                         <div class="portfolio-item">
-                                            <img src="./assets/media/portfolio/ui.png" alt="ui Project 1" />
+                                            <img src="./assets/media/portfolio/ui.png" alt="ui Project 1"  loading="lazy"/>
                                         </div>
                                     </div>
                                     <div class="col-12 ux mix">
                                         <div class="portfolio-item">
-                                            <img src="./assets/media/portfolio/ux.png" alt="UX Project 1" />
+                                            <img src="./assets/media/portfolio/ux.png" alt="UX Project 1"  loading="lazy"/>
                                         </div>
                                     </div>
                                 </div>
@@ -200,38 +202,30 @@
                 </div>
             </div>
         </section>
+        
 
-        <!--=================== SLICK =====================-->
-        <!-- <link rel='stylesheet' type='text/css' href='vendor/slick/slick.css'> -->
-         <!-- =================== MIXITUP =====================-->
-         <!-- <script type='text/javascript' src='./assets/vendors/jquery-3.2.1.min.js'></script> -->
-        <script type='text/javascript' src='./assets/vendors/mixitup.min.js'></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                var portfolioItem = document.querySelector('.rmz-portfolio');
-                if (portfolioItem) {
-                    var mixer = mixitup(portfolioItem, {
-                        controls: {
-                            scope: 'local'
-                        }
-                    });
-                }
-            });
-        // var portfolio_item = $('.rmz-portfolio');
-        // if (portfolio_item.length) {
-        //     var mixer = mixitup(portfolio_item, {
-        //         controls:{
-        //             scope: 'local'
-        //         }
-        //     });
-        // };
-        </script>
-        <!-- =================== SLICK =====================-->
-        <!-- <script type='text/javascript' src='vendor/slick/slick.min.js'></script> -->
+
+
+
+
     </main>
 
     <!-- scripts -->
-    <script src="./assets/vendors/bootstrap.bundle.min.js"></script>
+    <script src="./assets/vendors/bootstrap.bundle.min.js" defer></script>
+    <script type='text/javascript' src='./assets/vendors/mixitup.min.js' defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var portfolioItem = document.querySelector('.rmz-portfolio');
+            if (portfolioItem) {
+                var mixer = mixitup(portfolioItem, {
+                    controls: {
+                        scope: 'local'
+                    }
+                });
+            }
+        });
+    </script>
+    
 </body>
 
 </html>
