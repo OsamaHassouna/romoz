@@ -149,6 +149,85 @@
                 </ul>
             </div>
         </section>
+
+        <section class="rmz-portfolio">
+            <div class="container">
+                <div class="rmz-portfolio__content">
+                    <div class="rmz-portfolio__header">
+                        <h2 class="rmz-portfolio__title">Our Work</h2>
+                        <div class="rmz-portfolio__filter">
+                            <button class="rmz-btn filter-btn active" data-filter="all">All</button>
+                            <button class="rmz-btn filter-btn" data-toggle=".branding">Branding</button>
+                            <button class="rmz-btn filter-btn" data-toggle=".design">Design</button>
+                            <button class="rmz-btn filter-btn" data-toggle=".social">Social Media</button>
+                            <button class="rmz-btn filter-btn" data-toggle=".ui">UI</button>
+                            <button class="rmz-btn filter-btn" data-toggle=".ux">UX</button>
+                        </div>
+                    </div>
+                    <div class="rmz-portfolio__items portfolio">
+                        <div class="row">
+                            <div class="col-lg-3 branding mix">
+                                <div class="portfolio-item">
+                                    <img src="./assets/media/portfolio/branding.png" alt="Branding Project 1" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 social branding mix">
+                                <div class="portfolio-item">
+                                    <img src="./assets/media/portfolio/social.png" alt="Social Media Project 1" />
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="row">
+                                    <div class="col-12 ui ux mix">
+                                        <div class="portfolio-item">
+                                            <img src="./assets/media/portfolio/ui.png" alt="ui Project 1" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12 ux mix">
+                                        <div class="portfolio-item">
+                                            <img src="./assets/media/portfolio/ux.png" alt="UX Project 1" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rmz-portfolio__more">
+                        <a href="" class="rmz-btn btn-secondary">Discover More</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!--=================== SLICK =====================-->
+        <!-- <link rel='stylesheet' type='text/css' href='vendor/slick/slick.css'> -->
+         <!-- =================== MIXITUP =====================-->
+         <!-- <script type='text/javascript' src='./assets/vendors/jquery-3.2.1.min.js'></script> -->
+        <script type='text/javascript' src='./assets/vendors/mixitup.min.js'></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var portfolioItem = document.querySelector('.rmz-portfolio');
+                if (portfolioItem) {
+                    var mixer = mixitup(portfolioItem, {
+                        controls: {
+                            scope: 'local'
+                        }
+                    });
+                }
+            });
+        // var portfolio_item = $('.rmz-portfolio');
+        // if (portfolio_item.length) {
+        //     var mixer = mixitup(portfolio_item, {
+        //         controls:{
+        //             scope: 'local'
+        //         }
+        //     });
+        // };
+        </script>
+        <!-- =================== SLICK =====================-->
+        <!-- <script type='text/javascript' src='vendor/slick/slick.min.js'></script> -->
     </main>
 
     <!-- scripts -->

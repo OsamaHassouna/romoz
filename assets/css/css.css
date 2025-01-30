@@ -380,6 +380,75 @@ body {
 .rmz-services .rmz-services__list .service-item:nth-child(4) .service-item__desc{color: white}
 
 /*=============*/
+/* Portfolio */
+.rmz-portfolio__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 50px;
+}
+.rmz-portfolio__header .rmz-portfolio__title {
+  font-family: Proxima Nova;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 2.8px;
+  color: var(--clr-primary);
+  text-transform: uppercase;
+}
+.rmz-portfolio__header .rmz-portfolio__filter {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+.rmz-portfolio__header .rmz-portfolio__filter .rmz-btn.filter-btn {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #C2C6CD;
+  text-transform: uppercase;
+  position: relative;
+}
+.rmz-portfolio__header .rmz-portfolio__filter .rmz-btn.filter-btn::before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background: #272B2B;
+  bottom: -14px;
+  transition: 0.3s width ease-in-out;
+}
+.rmz-portfolio__header .rmz-portfolio__filter .rmz-btn.filter-btn.mixitup-control-active,
+.rmz-portfolio__header .rmz-portfolio__filter .rmz-btn.filter-btn:hover{color: #272B2B;}
+.rmz-portfolio__header .rmz-portfolio__filter .rmz-btn.filter-btn.mixitup-control-active::before,
+.rmz-portfolio__header .rmz-portfolio__filter .rmz-btn.filter-btn:hover::before{width: 100%;}
+
+.rmz-portfolio__items .row .row{height: calc(100% - 30px);}
+.rmz-portfolio__items .portfolio-item {
+  height:  calc(100% - 30px);
+  align-items: stretch;
+  display: flex;
+  margin-bottom: 30px;
+}
+.rmz-portfolio__items .portfolio-item img {
+  object-fit: cover;
+}
+.rmz-portfolio__more {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.rmz-portfolio__more .rmz-btn {
+  border-radius: 20px;
+  font-size: 20px;
+  line-height: 26px;
+  min-width: 230px;
+  font-weight: 400;
+}
+/*=============*/
 /* General */
 .text-warning {
   color: var(--clr-warning);
